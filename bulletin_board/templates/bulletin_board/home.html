@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cognitus Search</title>
+	<link href="https://www.etiya.com/images/home/1083/large/4842.png" rel="shortcut icon">
+	<link rel='stylesheet' type='text/css' href="{% static 'bulletin_board/main.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class='company-name'>
+		<h1 class='shadow'>COGNITUS SEARCH</h1>
+	</div>
+	<div class='search-box'>
+		<form action='bulletin_results' method="GET">
+			<input type="text" name="search" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search..'" placeholder="Search.." class='shadow' value='{{ val }}'>
+		</form>
+	</div>
+</body>
+</html>

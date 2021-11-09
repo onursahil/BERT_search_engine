@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Results</title>
+	<link href="https://www.etiya.com/images/home/1083/large/4842.png" rel="shortcut icon">
+	<link rel='stylesheet' type='text/css' href="{% static 'bulletin_board/results.css' %}">
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body class='body'>
+	<h1 class='result-title shadow-3d'>Search Results</h1>
+	{% for key in search_q %}
+		<h1 class='search-keyword shadow-3d'>Search Keyword: {{ key.keyword }}</h1>
+	{% endfor %}
+	{% for answer in answer_key %}
+		<h1 class='search-keyword shadow-3d'>Answer: {{ answer.answer_key }}</h1>
+		<h1 class='search-keyword shadow-3d'>Score: {{ answer.score }}</h1>
+	{% endfor %}
+	{% for post in posts %}
+	<main role="main" class="container">
+		<div class="row">
+			<div class="col-md-8 result-col">
+				<article class="media content-section">
+				  <div class="media-body">
+				    <div class="article-metadata">
+				      <small class="text-muted">Document ID: {{ post.document_id }}</small>
+					</div>
+					<div class="article-metadata">
+					  <small class="text-muted">TOPIC ID: {{ post.topic_id }}</small>
+					</div>
+					<div class="article-metadata">
+					  <small class="text-muted">DOCUMENT NAME: {{ post.document_name }}</small>
+					</div>
+					<div class="article-metadata">
+					  <small class="text-muted">TOPIC: {{ post.topic }}</small>
+					</div>
+					<div class="article-metadata">
+					  <small class="text-muted">SCORE: {{ post.score }}</small>
+					</div>
+					<div id='content'>
+					  <h2><p>{{ post.content }}</p></h2>
+					</div>
+				  </div>
+				</article>
+			</div>
+		</div>
+	</main>
+	{% endfor %}
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

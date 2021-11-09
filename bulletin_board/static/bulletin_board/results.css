@@ -1,0 +1,111 @@
+.body{
+	background-color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #c4c8ca;
+}
+
+.result-title{
+  text-align: center;
+}
+
+.search-keyword{
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+ul {
+  margin: 0;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.content-section {
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.result-col{
+  width: 50%;
+  margin: 0 auto;
+}
+
+.article-title {
+  color: #444444;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+.shadow-3d { 
+  color: white; 
+  font: bold 52px Helvetica, Arial, Sans-Serif;
+  text-shadow: 1px 1px #fe4902, 
+               2px 2px #fe4902, 
+               3px 3px #fe4902;
+}
+.shadow-3d:hover {
+  position: relative; 
+  top: -3px; 
+  left: -3px; 
+  text-shadow: 1px 1px #fe4902, 
+               2px 2px #fe4902, 
+               3px 3px #fe4902, 
+               4px 4px #fe4902, 
+               5px 5px #fe4902, 
+               6px 6px #fe4902;
+}
